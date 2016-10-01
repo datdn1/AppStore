@@ -79,6 +79,12 @@
     return self;
 }
 
+- (void)setAppCategory:(AppCategory *)appCategory {
+    _appCategory = appCategory;
+    self.nameLabel.text = appCategory.name;
+    [self.appcollectionView reloadData];
+}
+
 - (void)setupViews {
     self.backgroundColor = [UIColor clearColor];
     
@@ -112,11 +118,12 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return [self.appCategory.apps count];
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AppCell *appCell = [collectionView dequeueReusableCellWithReuseIdentifier:kAppCellIdentifier forIndexPath:indexPath];
+    appCell.app = self.appCategory.apps[indexPath.item];
     appCell.backgroundColor = [UIColor whiteColor];
     return appCell;
 }

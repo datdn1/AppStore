@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppCategory.h"
 
 @interface CategoryCell : UICollectionViewCell
+
+@property (nonatomic, strong)  AppCategory *appCategory;
 
 @end

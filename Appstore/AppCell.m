@@ -61,6 +61,22 @@
     return _priceLabel;
 }
 
+- (void)setApp:(App *)app {
+    self.nameLabel.text = app.name;
+    
+    if (app.imageName != nil) {
+        self.imageView.image = [UIImage imageNamed:app.imageName];
+    }
+    
+    self.categoryLabel.text = app.category;
+    if (app.price != nil) {
+        self.priceLabel.text = [NSString stringWithFormat:@"$%@", [app.price stringValue]];
+    }
+    else {
+        self.priceLabel.text = @"";
+    }
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupViews];

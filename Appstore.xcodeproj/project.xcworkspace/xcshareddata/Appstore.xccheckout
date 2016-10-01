@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1A25FC0D-BC85-4FD9-8BD5-8928F8597F23</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Appstore</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>30F3EAA37459D7FE8AFB8FD8B10CF88D3B2C78EA</key>
+		<string>https://github.com/datdn1/AppStore.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Appstore.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>30F3EAA37459D7FE8AFB8FD8B10CF88D3B2C78EA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/datdn1/AppStore.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>30F3EAA37459D7FE8AFB8FD8B10CF88D3B2C78EA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>30F3EAA37459D7FE8AFB8FD8B10CF88D3B2C78EA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Appstore</string>
+		</dict>
+	</array>
+</dict>
+</plist>
