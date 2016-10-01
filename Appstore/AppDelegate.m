@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FeatureAppsController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    FeatureAppsController *featureController = [[FeatureAppsController alloc] initWithCollectionViewLayout:layout];
+    [self.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:featureController]];
     return YES;
 }
 
