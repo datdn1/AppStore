@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "App.h"
 
 @interface FeatureAppsController : UICollectionViewController
+
+- (void)showDetailForApp:(App*)app;
 
 @end
 

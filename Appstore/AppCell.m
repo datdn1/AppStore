@@ -10,7 +10,7 @@
 
 @interface AppCell ()
 
-@property (nonatomic, strong) UIImageView *imageView;
+
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *categoryLabel;
 @property (nonatomic, strong) UILabel *priceLabel;
@@ -87,9 +87,15 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width);
-    self.nameLabel.frame = CGRectMake(0, self.bounds.size.width + 2, self.bounds.size.width, 40);
-    self.categoryLabel.frame = CGRectMake(0, self.bounds.size.width + 38, self.bounds.size.width, 20);
-    self.priceLabel.frame = CGRectMake(0, self.bounds.size.width + 56, self.bounds.size.width, 20);
+    self.nameLabel.frame = CGRectMake(0, self.bounds.size.width + 5, self.bounds.size.width, 40);
+    [self.nameLabel sizeToFit];
+    
+    CGRect nameFrame = self.nameLabel.frame;
+//    self.categoryLabel.frame = CGRectMake(0, self.bounds.size.width + 38, self.bounds.size.width, 20);
+    self.categoryLabel.frame = CGRectMake(0, nameFrame.origin.y + nameFrame.size.height, self.bounds.size.width, 20);
+    
+//    self.priceLabel.frame = CGRectMake(0, self.bounds.size.width + 56, self.bounds.size.width, 20);
+     self.priceLabel.frame = CGRectMake(0, nameFrame.origin.y + nameFrame.size.height + 20, self.bounds.size.width, 20);
 }
 
 - (void)setupViews {

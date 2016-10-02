@@ -8,11 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+
+@class FeatureApps;
 @interface AppCategory : NSObject
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *apps;
 @property (nonatomic, copy) NSString *type;
 
-+ (void)fetchAppsFromURL:(NSString*)urlString completion:(void (^)(NSArray *apps, NSError *error))completion;
++ (void)fetchAppsFromURL:(NSString*)urlString completion:(void (^)(FeatureApps *featureApps, NSError *error))completion;
+
+@end
+
+@interface FeatureApps : NSObject
+
+@property (nonatomic, strong)  AppCategory *bannerCategory;
+@property (nonatomic, strong) NSArray *categories;
+
 @end

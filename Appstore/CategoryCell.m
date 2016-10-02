@@ -9,12 +9,13 @@
 #import "CategoryCell.h"
 #import "Masonry.h"
 #import "AppCell.h"
+#import "FeatureAppsController.h"
 
 #define kAppCellIdentifier      @"AppCellId"
 
 @interface CategoryCell ()<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) UICollectionView *appcollectionView;
+
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UIView *dividerLineView;
 @property (nonatomic, strong) UILabel *seeAllLabel;
@@ -111,7 +112,7 @@
     }];
     
     [self.dividerLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.and.bottom.equalTo(self).insets(UIEdgeInsetsMake(0, 8, 0, 8));
+        make.left.right.and.bottom.equalTo(self).insets(UIEdgeInsetsMake(0, 8, 0, 0));
         make.height.equalTo(@1);
     }];
     
@@ -131,4 +132,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(100, self.bounds.size.height - 30 - 1);
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.controller showDetailForApp:self.appCategory.apps[indexPath.item]];
+}
+
 @end

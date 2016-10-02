@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "AppCategory.h"
 
+@class FeatureAppsController;
 @interface CategoryCell : UICollectionViewCell
 
 @property (nonatomic, strong)  AppCategory *appCategory;
+@property (nonatomic, strong) UICollectionView *appcollectionView;
+@property (nonatomic, strong) FeatureAppsController *controller;
 
+- (void)setupViews;
 @end
